@@ -1,3 +1,5 @@
+import sys
+
 def get_num_employees():
     return int(input('Enter the number of Employees :'))
 
@@ -10,8 +12,14 @@ for i in range(number):
 
 agetotal = sum(ages)
 
+names = []
+for i in range(number):
+    name = str(input('Enter the Names of the Employees :')).strip().title()
+    names.append(name)
+
+print(f'Name : {names} -- Age {ages}')
 print(f'Total age : {agetotal}')
 print(f'Average age : {round(agetotal / number)}')
-       
+ 
 
 
