@@ -2,13 +2,13 @@ import customtkinter as ctk
 
 # Set appearance
 ctk.set_appearance_mode("System")  # Options: "System", "Dark", "Light"
-ctk.set_default_color_theme("blue")  # Options: "blue", "green", "dark-blue"
+ctk.set_default_color_theme("dark-blue")  # Options: "blue", "green", "dark-blue"
 
 class EmployeeApp(ctk.CTk):
     def __init__(self):
         super().__init__()
         self.title("Employee Info App")
-        self.geometry("500x500")
+        self.geometry("400x400")
 
         self.num_employees = 0
         self.current_index = 0
@@ -18,7 +18,7 @@ class EmployeeApp(ctk.CTk):
         self.create_initial_ui()
 
     def create_initial_ui(self):
-        self.label = ctk.CTkLabel(self, text="👥 Enter number of employees:", font=ctk.CTkFont(size=16))
+        self.label = ctk.CTkLabel(self, text="👥 Enter number of employees:", font=ctk.CTkFont(size=16),text_color='light green')
         self.label.pack(pady=20)
 
         self.entry = ctk.CTkEntry(self, placeholder_text="e.g. 3")
